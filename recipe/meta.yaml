@@ -1,5 +1,5 @@
 {% set name = "plant-isce3" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -32,8 +32,8 @@ requirements:
     - python >={{ python_min }}
     - numpy >=2.0.0
     - gdal >=3.8
-    - isce3 >=0.24.5
-    - plant >=0.5.8
+    - isce3 >=0.25.0
+    - plant >=0.5.9
     - libnetcdf
     - h5py
     - matplotlib-base
