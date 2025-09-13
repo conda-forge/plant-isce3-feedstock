@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: ecee58842f93d2ee499bfea0fafd5f35cdc506ac2d2b9fcbe309db0cfcc729c1
+  sha256: 21d83161d3ed984a2a7e63b4df28ce298ec1362bde116396fe97287a319968d9
 
 build:
   entry_points:
