@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: 40036561bb6e378df8b87aa858deef5f3a34d3d9a8988a2c332189457c954280
+  sha256: 704101bee98668356d4706bdcfbab657d9a98bfe983096b2e47a6bb7992f91a3
 
 build:
   entry_points:
@@ -41,6 +41,7 @@ requirements:
     - matplotlib-base
     - scipy
     - s1reader >=0.2.0
+    - boto3
 
 test:
   imports:
