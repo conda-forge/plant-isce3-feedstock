@@ -1,5 +1,5 @@
 {% set name = "plant-isce3" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: de312c49b25e1ef77a8e1b8109aee2d3a30ebeeb573b8a3d46b615f7f30fdb06
+  sha256: 40036561bb6e378df8b87aa858deef5f3a34d3d9a8988a2c332189457c954280
 
 build:
   entry_points:
@@ -19,6 +19,7 @@ build:
     - plant_isce3_filter = plant_isce3.plant_isce3_filter:main
     - plant_isce3_resample = plant_isce3.plant_isce3_resample:main
     - plant_isce3_runconfig = plant_isce3.plant_isce3_runconfig:main
+    - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -34,7 +35,7 @@ requirements:
     - numpy >=2.0.0
     - gdal >=3.8
     - isce3 >=0.25.0
-    - plant >=0.6.0
+    - plant >=0.6.2
     - libnetcdf
     - h5py
     - matplotlib-base
