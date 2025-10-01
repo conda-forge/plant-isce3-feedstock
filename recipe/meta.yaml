@@ -22,7 +22,7 @@ build:
     - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -42,6 +42,8 @@ requirements:
     - scipy
     - s1reader >=0.2.0
     - boto3
+    - libgdal-hdf5
+    - libgdal-netcdf
 
 test:
   imports:
