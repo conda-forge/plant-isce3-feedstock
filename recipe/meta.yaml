@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: 1332f3a79bd0b84cc805b42439dffa374ce95353c4e0f975663d093485599499
+  sha256: d2e2ae5ed13271efe44b55ae616f02adf5976b689e5534c5f5552158012ad0b9
 
 build:
   entry_points:
@@ -22,7 +22,7 @@ build:
     - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
