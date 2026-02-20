@@ -44,7 +44,7 @@ requirements:
     - boto3
     - libgdal-hdf5
     - libgdal-netcdf
-    - pyre>=1.12.5
+    - pyre >=1.12.5
 
 test:
   imports:
