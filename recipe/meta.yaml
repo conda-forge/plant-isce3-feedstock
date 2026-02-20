@@ -1,5 +1,5 @@
 {% set name = "plant-isce3" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: 960cfcd78deab5d545c7556f8998d876d47278998e411acd5496dddc5bb897bc
+  sha256: d9129b78903adb38845ae70e4a235fa7bd9787a928acc0f98e9a0b3ef8b5f307
 
 build:
   entry_points:
@@ -44,6 +44,7 @@ requirements:
     - boto3
     - libgdal-hdf5
     - libgdal-netcdf
+    - pyre >=1.12.5
 
 test:
   imports:
