@@ -11,18 +11,18 @@ source:
 
 build:
   entry_points:
-    - plant_isce3_info = plant_isce3.plant_isce3_info:main
-    - plant_isce3_geocode = plant_isce3.plant_isce3_geocode:main
-    - plant_isce3_polygon = plant_isce3.plant_isce3_polygon:main
-    - plant_isce3_topo = plant_isce3.plant_isce3_topo:main
-    - plant_isce3_util = plant_isce3.plant_isce3_util:main
-    - plant_isce3_filter = plant_isce3.plant_isce3_filter:main
-    - plant_isce3_resample = plant_isce3.plant_isce3_resample:main
-    - plant_isce3_runconfig = plant_isce3.plant_isce3_runconfig:main
-    - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main
+    - plant_isce3_info = plant_isce3.plant_isce3_info:main_cli
+    - plant_isce3_geocode = plant_isce3.plant_isce3_geocode:main_cli
+    - plant_isce3_polygon = plant_isce3.plant_isce3_polygon:main_cli
+    - plant_isce3_topo = plant_isce3.plant_isce3_topo:main_cli
+    - plant_isce3_util = plant_isce3.plant_isce3_util:main_cli
+    - plant_isce3_filter = plant_isce3.plant_isce3_filter:main_cli
+    - plant_isce3_resample = plant_isce3.plant_isce3_resample:main_cli
+    - plant_isce3_runconfig = plant_isce3.plant_isce3_runconfig:main_cli
+    - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
