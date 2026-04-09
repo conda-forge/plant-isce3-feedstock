@@ -35,7 +35,7 @@ requirements:
     - numpy >=1.25.2
     - gdal >=3.8
     - isce3 >=0.25.0
-    - plant >=0.8.0
+    - plant >=0.8.1
     - libnetcdf
     - h5py
     - matplotlib-base
