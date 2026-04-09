@@ -1,5 +1,5 @@
 {% set name = "plant-isce3" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: d9129b78903adb38845ae70e4a235fa7bd9787a928acc0f98e9a0b3ef8b5f307
+  sha256: a8db9cae0f2ecf47700845ee9904184e9a7fa58fe70ed2259b2c234752ef39a2
 
 build:
   entry_points:
@@ -17,12 +17,13 @@ build:
     - plant_isce3_topo = plant_isce3.plant_isce3_topo:main_cli
     - plant_isce3_util = plant_isce3.plant_isce3_util:main_cli
     - plant_isce3_filter = plant_isce3.plant_isce3_filter:main_cli
+    - plant_isce3_rtc = plant_isce3.plant_isce3_rtc:main_cli
     - plant_isce3_resample = plant_isce3.plant_isce3_resample:main_cli
     - plant_isce3_runconfig = plant_isce3.plant_isce3_runconfig:main_cli
     - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -35,13 +36,15 @@ requirements:
     - numpy >=1.25.2
     - gdal >=3.8
     - isce3 >=0.25.0
-    - plant >=0.8.0
+    - plant >=0.8.1
     - libnetcdf
     - h5py
     - matplotlib-base
     - scipy
     - s1reader >=0.2.0
     - boto3
+    - geopandas
+    - shapely    
     - libgdal-hdf5
     - libgdal-netcdf
     - pyre >=1.12.5
@@ -56,6 +59,7 @@ test:
     - plant_isce3_topo --help
     - plant_isce3_util --help
     - plant_isce3_filter --help
+    - plant_isce3_rtc --help
     - plant_isce3_resample --help
     - plant_isce3_runconfig --help
   requires:
