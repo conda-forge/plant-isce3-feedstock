@@ -56,6 +56,7 @@ test:
     - plant_isce3_topo --help
     - plant_isce3_util --help
     - plant_isce3_filter --help
+    - plant_isce3_rtc --help
     - plant_isce3_resample --help
     - plant_isce3_runconfig --help
   requires:
