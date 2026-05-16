@@ -41,7 +41,7 @@ requirements:
     - h5py
     - matplotlib-base
     - scipy
-    - s1reader >=0.2.0
+    # - s1reader >=0.2.0
     - boto3
     - libgdal-hdf5
     - libgdal-netcdf
@@ -59,6 +59,8 @@ test:
     - plant_isce3_filter --help
     - plant_isce3_resample --help
     - plant_isce3_runconfig --help
+    - plant_isce3_batch_processing --help
+    - plant_isce3_rslc_eap_analysis --help
   requires:
     - pip
     - python {{ python_min }}
