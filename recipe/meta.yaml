@@ -21,7 +21,7 @@ build:
     - plant_isce3_resample = plant_isce3.plant_isce3_resample:main_cli
     - plant_isce3_runconfig = plant_isce3.plant_isce3_runconfig:main_cli
     - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main_cli
-    - plant_isce3_rslc_eap_analysis.py = plant_isce3.plant_isce3_rslc_eap_analysis:main_cli
+    - plant_isce3_rslc_eap_analysis = plant_isce3.plant_isce3_rslc_eap_analysis:main_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
