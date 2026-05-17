@@ -45,7 +45,7 @@ requirements:
     # - s1reader >=0.2.0
     - boto3
     - geopandas
-    - shapely    
+    # - shapely    
     - libgdal-hdf5
     - libgdal-netcdf
     # - pyre >=1.12.5
