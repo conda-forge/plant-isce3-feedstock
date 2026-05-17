@@ -24,7 +24,7 @@ build:
     - plant_isce3_rslc_eap_analysis.py = plant_isce3.plant_isce3_rslc_eap_analysis.py:main_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -35,20 +35,20 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.25.2
-    - gdal >=3.8
-    # - isce3 >=0.25.0
-    - plant >=0.8.2
+    - gdal ==3.11.4
+    - isce3 ==0.25.3
+    - plant ==0.8.2
     - libnetcdf
     - h5py
-    # - matplotlib-base
+    - matplotlib-base
     - scipy
-    # - s1reader >=0.2.0
+    - s1reader ==0.2.5
     - boto3
     - geopandas
-    # - shapely    
+    - shapely
     - libgdal-hdf5
     - libgdal-netcdf
-    # - pyre >=1.12.5
+    - pyre >=1.12.5
 
 test:
   imports:
