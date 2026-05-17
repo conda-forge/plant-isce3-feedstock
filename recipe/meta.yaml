@@ -35,7 +35,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.25.2
-    - gdal ==3.11.4
+    - gdal >=3.11
     - isce3 ==0.25.3
     - plant ==0.8.2
     - libnetcdf
