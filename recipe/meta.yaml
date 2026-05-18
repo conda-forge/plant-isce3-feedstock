@@ -1,5 +1,5 @@
 {% set name = "plant-isce3" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: a8db9cae0f2ecf47700845ee9904184e9a7fa58fe70ed2259b2c234752ef39a2
+  sha256: cf0257d7516caa38071556899e0ead436eefb086b433ba6de757c2f1e42b1a4f
 
 build:
   entry_points:
@@ -21,9 +21,10 @@ build:
     - plant_isce3_resample = plant_isce3.plant_isce3_resample:main_cli
     - plant_isce3_runconfig = plant_isce3.plant_isce3_runconfig:main_cli
     - plant_isce3_batch_processing = plant_isce3.plant_isce3_batch_processing:main_cli
+    - plant_isce3_rslc_eap_analysis = plant_isce3.plant_isce3_rslc_eap_analysis:main_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -35,13 +36,13 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.25.2
     - gdal ==3.11.4
-    - isce3 ==0.25.3
-    - plant ==0.8.2
+    - isce3 >=0.25.3
+    - plant >=0.8.2
     - libnetcdf
     - h5py
     - matplotlib-base
     - scipy
-    - s1reader ==0.2.5
+    - s1reader >=0.2.5
     - boto3
     - geopandas
     - shapely
@@ -62,6 +63,8 @@ test:
     - plant_isce3_rtc --help
     - plant_isce3_resample --help
     - plant_isce3_runconfig --help
+    - plant_isce3_batch_processing --help
+    - plant_isce3_rslc_eap_analysis --help
   requires:
     - pip
     - python {{ python_min }}
