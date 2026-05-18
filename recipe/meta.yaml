@@ -35,14 +35,14 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.25.2
-    - gdal >=3.11
-    - isce3 ==0.25.3
-    - plant ==0.8.2
+    - gdal ==3.11.4
+    - isce3 >=0.25.3
+    - plant >=0.8.2
     - libnetcdf
     - h5py
     - matplotlib-base
     - scipy
-    - s1reader ==0.2.5
+    - s1reader >=0.2.5
     - boto3
     - geopandas
     - shapely
