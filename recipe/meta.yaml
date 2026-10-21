@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: fb054b03b935302a101e440ab636402ec102740f5ecd0d7bb3c39c581198be09
+  sha256: f52903d8ca46ecb068b21c43df143c7f3988f41e427997bbe941d9ab58d0cb58
 
 build:
   entry_points:
@@ -50,6 +50,7 @@ requirements:
     - libgdal-hdf5
     - libgdal-netcdf
     - pyre >=1.12.5
+    - fiona
 
 test:
   imports:
