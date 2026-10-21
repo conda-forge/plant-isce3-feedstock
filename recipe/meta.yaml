@@ -1,5 +1,5 @@
 {% set name = "plant-isce3" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: 9c96195240b519f56a26e364115f0b26049c981af00ed1f9a98b140031da2b2f
+  sha256: f52903d8ca46ecb068b21c43df143c7f3988f41e427997bbe941d9ab58d0cb58
 
 build:
   entry_points:
